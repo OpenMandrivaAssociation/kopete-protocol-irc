@@ -5,7 +5,7 @@ Group:          Networking/Instant messaging
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        IRC Protocol support for Kopete
 Version:        0.1.2
-Release:        %mkrel 2
+Release:        %mkrel 4
 Source:         http://kde-apps.org/CONTENT/content-files/113720-irc.tar.gz
 Requires:	    ircclient-qt
 Requires:       kopete
@@ -29,7 +29,7 @@ Irc Protocol Support for Kopete
 %setup -n irc
 
 %build
-%cmake_kde4
+%cmake_kde4 -DIRCCLIENT_INCLUDE_DIR=/usr/lib/qt4/include/ircclient-qt/
 
 %install
 %makeinstall -C build
