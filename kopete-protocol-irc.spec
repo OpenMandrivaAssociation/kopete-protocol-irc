@@ -19,11 +19,11 @@ Group:          Networking/Instant messaging
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        IRC Protocol support for Kopete
 Version:        0.1.2
-Release:        %mkrel 1
+Release:        %mkrel 2
 Source:         http://kde-apps.org/CONTENT/content-files/113720-irc.tar.gz
 Requires:	ircclient-qt
 BuildRequires:  kdenetwork4-devel
-BuildRequires:  libircclient-qt-devel >= 0.3.2
+BuildRequires:  ircclient-qt-devel >= 0.3.2
 
 %description
 Facebook Protocol Support for Kopete
