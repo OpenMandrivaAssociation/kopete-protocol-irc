@@ -1,17 +1,3 @@
-#
-# spec file for package kopete-protocol-facebook
-#
-# Copyright (c) 2008 SUSE LINUX Products GmbH, Nuernberg, Germany.
-# This file and all modifications and additions to the pristine
-# package are under the same license as the package itself.
-#
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
-
-# norootforbuild
-
-%define gitrev 3376a46
-
 Name:           kopete-protocol-irc
 License:        GPLv2+
 Url:            http://kde-apps.org/content/show.php/kopete+irc+plugin?content=113720
@@ -21,40 +7,32 @@ Summary:        IRC Protocol support for Kopete
 Version:        0.1.2
 Release:        %mkrel 2
 Source:         http://kde-apps.org/CONTENT/content-files/113720-irc.tar.gz
-Requires:	ircclient-qt
+Requires:	    ircclient-qt
+Requires:       kopete
 BuildRequires:  kdenetwork4-devel
 BuildRequires:  ircclient-qt-devel >= 0.3.2
 
 %description
-Facebook Protocol Support for Kopete
+Irc Protocol Support for Kopete
+
+%files
+%defattr(-,root,root)
+%_kde_libdir/kde4/kopete_irc.so
+%_kde_appsdir/kopete/icons/*
+%_kde_appsdir/kopete/ircnetworks.xml
+%_kde_appsdir/kopete_irc
+%_kde_datadir/kde4/services/kopete_irc.desktop
+
+#--------------------------------------------------------------------
 
 %prep
 %setup -n irc
 
 %build
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr -DIRCCLIENT_INCLUDE_DIR=/usr/lib/qt4/include/ircclient-qt/ ..
+%cmake_kde4
 
 %install
-cd build
-%makeinstall
-
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%makeinstall -C build
 
 %clean
-rm -rf $RPM_BUILD_ROOT
-
-%files
-%defattr(-,root,root)
-#%doc AUTHORS COPYING
-/usr/%_lib/kde4/kopete_irc.so
-/usr/share/apps/kopete/icons/*
-/usr/share/apps/kopete/ircnetworks.xml
-#/usr/share/apps/kopete/icons/oxygen/16x16/actions/*
-#/usr/share/apps/kopete/icons/oxygen/32x32/*
-/usr/share/apps/kopete_irc/ircchatui.rc
-/usr/share/kde4/services/kopete_irc.desktop
-
+rm -rf %buildroot
