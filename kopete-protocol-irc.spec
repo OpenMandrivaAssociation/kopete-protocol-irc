@@ -29,10 +29,10 @@ Irc Protocol Support for Kopete
 %setup -n irc
 
 %build
-%cmake_kde4 -DIRCCLIENT_INCLUDE_DIR=/usr/lib/qt4/include/ircclient-qt/ -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr
+%cmake_kde4 -DIRCCLIENT_INCLUDE_DIR=/usr/lib/qt4/include/ircclient-qt/
 
 %install
-%makeinstall -C build
+%makeinstall_std -C build
 
 %clean
 rm -rf %buildroot
