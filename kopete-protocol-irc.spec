@@ -5,7 +5,7 @@ Group:          Networking/Instant messaging
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        IRC Protocol support for Kopete
 Version:        0.1.2
-Release:        %mkrel 6
+Release:        %mkrel 7
 Source:         http://kde-apps.org/CONTENT/content-files/113720-irc.tar.gz
 Requires:	    ircclient-qt
 Requires:       kopete
