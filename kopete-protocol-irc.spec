@@ -36,3 +36,38 @@ Irc Protocol Support for Kopete
 
 %clean
 rm -rf %buildroot
+
+
+%changelog
+* Sun Mar 20 2011 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 0.1.2-8mdv2011.0
++ Revision: 647082
+- Rebuild
+
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.2-7mdv2011.0
++ Revision: 612659
+- the mass rebuild of 2010.1 packages
+
+* Fri Mar 19 2010 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 0.1.2-6mdv2010.1
++ Revision: 525166
+- Rebuild
+
+* Fri Nov 27 2009 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 0.1.2-5mdv2010.1
++ Revision: 470615
+- Lets upse makeinstall_std
+- Lets upse makeinstall_std
+- Add -D to let install in rootjail
+- Add -D to find ircclient-qt includes
+- BR fixed
+- import kopete-protocol-irc
+
+  + Nicolas Lécureuil <nlecureuil@mandriva.com>
+    - Clean spec file to use mandriva rules and policies
+        - Use kde rpm macros
+        - Use rpm macros and do not hardcode prefix
+        - do not tell to report bugs on opensuse bugzilla
+        - Do not use copyrighted suse spec file
+
+
+* Thu Nov 23 2009 Daniel Lucio <dlucio@mandriva.org> - 0.1.2-1mdv2010.0
+- Bump release
+
