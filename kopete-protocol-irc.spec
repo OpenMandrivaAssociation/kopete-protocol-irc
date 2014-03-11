@@ -1,7 +1,7 @@
 Summary:	IRC Protocol support for Kopete
 Name:		kopete-protocol-irc
 Version:	0.1.2
-Release:	9
+Release:	10
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://kde-apps.org/content/show.php/kopete+irc+plugin?content=113720
@@ -27,7 +27,7 @@ IRC Protocol Support for Kopete.
 %setup -qn irc
 
 %build
-%cmake_kde4 -DIRCCLIENT_INCLUDE_DIR=%{_libdir}/qt4/include/ircclient-qt/
+%cmake_kde4 -DIRCCLIENT_INCLUDE_DIR=%{_qt_includedir}/ircclient-qt/
 
 %install
 %makeinstall_std -C build
