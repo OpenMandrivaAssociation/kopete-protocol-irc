@@ -1,7 +1,7 @@
 Summary:	IRC Protocol support for Kopete
 Name:		kopete-protocol-irc
 Version:	0.1.2
-Release:	10
+Release:	11
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://kde-apps.org/content/show.php/kopete+irc+plugin?content=113720
