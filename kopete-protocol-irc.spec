@@ -4,7 +4,7 @@ Version:	0.1.2
 Release:	11
 License:	GPLv2+
 Group:		Networking/Instant messaging
-Url:		http://kde-apps.org/content/show.php/kopete+irc+plugin?content=113720
+Url:		https://kde-apps.org/content/show.php/kopete+irc+plugin?content=113720
 Source0:	http://kde-apps.org/CONTENT/content-files/113720-irc.tar.gz
 BuildRequires:	kopete-devel
 BuildRequires:	ircclient-qt-devel >= 0.3.2
